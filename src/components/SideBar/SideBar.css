@@ -1,0 +1,73 @@
+.SideBar{
+    border-right: 1px rgba(128, 128, 128, 0.349) solid;
+
+}
+
+.active{
+    background-color: #ff8f8f;
+}
+
+.people{
+    margin-top: 5vh;
+    display: flex;
+
+    flex-direction: column;
+    overflow-y: auto;
+
+
+
+}
+
+.person{
+    transition: .3s;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    
+}
+
+
+.person:hover{
+    background-color: #ff8f8f;
+    cursor: pointer;
+}
+
+
+.person .name{
+    margin-left: 15px;
+}
+
+.search_con{
+    display: flex;
+    justify-content: center;
+
+}
+
+.search{
+    width: 80%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(241, 241, 244);
+    border-radius: 5px;
+    padding: 1.5%;
+}
+
+.search > input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: gray;
+    margin-left: 15px;
+    width: 100%;
+}
+
+
+.search > input::placeholder{
+    color: gray;
+}
+

@@ -1,0 +1,53 @@
+body{
+    overflow-y: hidden;
+}
+.body{
+    text-align: center;
+  
+ 
+    
+}
+
+
+.chat{
+
+    display: grid;
+    grid-template-columns: 25% 75%;
+    height: 100vh;
+
+
+
+
+
+}
+
+.chats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+
+
+}
+
+
+
+
+
+/* Extra small devices (phones, 800px and down) */
+@media only screen and (max-width: 800px) {
+
+    
+    .chat{
+        grid-template-columns: 100%;
+    }
+    .chats{
+       display: none;
+    }
+
+
+
+
+  }
+  

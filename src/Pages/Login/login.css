@@ -1,0 +1,206 @@
+
+.app{
+
+    width: 100%;
+    height: 100vh;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+.err_txt{
+  
+  color: red;
+  margin-left: 5px;
+  margin-top: 5px;
+  font-size: 13px;
+  text-align: left;
+}
+
+.err_box{
+
+
+  width: 400px;
+  justify-content: space-between;
+  border: 1px red solid;
+  padding: 1%;
+  border-radius: 10px;
+  background-color: rgb(245, 157, 157);
+  color: white;
+  margin-bottom: 20px;
+  display: none;
+}
+
+.err_box > .cross{
+  transition: .3s;
+  color: rgb(245, 157, 157);
+}
+
+
+.err_box > .cross:hover{
+  cursor: pointer;
+  color: white;
+}
+
+.move_appear{
+  animation: down .7s ease-in-out;
+  transition: .5s;
+}
+
+@keyframes down {
+  from{
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.move_disappear{
+  transition: .5s;
+  animation: up 1s ease-in-out;
+}
+
+@keyframes up {
+  to{
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+
+a{
+    text-decoration: none;
+    color: blue;
+}
+
+  
+  .contanier{
+    
+    box-shadow: rgba(0, 0, 0, 0.438) 0px 5px 10px 1px;
+    padding: 5%;
+    transition: 3s;
+    border-radius: 7px;
+  }
+  
+  .title{
+  
+    text-align: center;
+    
+  }
+  
+  
+  .qute{
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+  
+  
+  .login_form > .con{
+  
+
+    display: flex;
+    align-items: center;
+  
+    padding: 1%;
+    
+  
+    border-bottom: 1px var(--underline_clr) solid;
+    
+  }
+  
+  
+  .login_form .con > .ico{
+  
+    padding: 1%;
+    height: 100%;
+    margin-right: 10px;
+  }
+  
+  .login_form > input{
+    border: 1.3px #bdbdbd solid;
+    outline: none;
+    padding: 4%;
+    padding-left: 7%;
+    border-radius: 3px;
+    color: rgb(53, 53, 53);
+    margin-top: 10px;
+    width: 100%;
+    transition: .3s;
+  
+  }
+  
+  .login_form >  input:focus{
+    border: 1.3px #313131 solid;
+  }
+  
+  .login_form > .login_btn{
+    border: none;
+    outline: none;
+    width: 95%;
+    background-color: #2C2E43;
+    color: white;
+    padding: 4% 0px 4% 0px;
+    margin-top: 30px;
+    transition: .3s;
+  }
+  
+  .login_form > .login_btn:hover{
+    width: 100%;
+    background-color: #747fff;
+    cursor: pointer;
+  }
+  
+  
+  .keep{
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .keep > input{
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  
+  
+  .forget{
+  
+    margin-top: 3vh;
+    color: gray;
+    font-size: 14px;
+    cursor: pointer;
+    transition: .3s;
+  }
+  
+  .forget:hover{
+    color: #2C2E43;
+  }
+  
+  .redirect_btn{
+    margin-top: 20px;
+  }
+  
+  
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    .contanier{
+        padding: 3%;
+        font-size: 15px;
+        width: 90%;
+    }
+
+
+
+
+  }
+  

@@ -1,0 +1,175 @@
+
+
+.hidden_SideBar{
+    border-right: 1px rgba(128, 128, 128, 0.349) solid;
+    height: 100vh;
+}
+.contn{
+    display: grid;
+    grid-template-columns: 25% 75%;
+
+}
+
+.messages{
+
+
+    overflow-y: auto;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    
+}
+
+
+
+
+.msg{
+    color: black;
+    padding: 1%;
+    border-radius: 5px;
+ 
+
+  
+}
+
+.msg .txt{
+    display: inline-block;
+    color: white;
+    padding: 1%;
+    border-radius: 15px;
+  
+
+}
+
+
+.left{
+    display: flex;
+
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.right{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+ .left  .txt{
+
+    background-color: royalblue;
+    margin-right: 20px;
+
+
+}
+  .right  .txt{
+
+    background-color: rgb(241, 241, 244);
+    color: black;
+
+    margin-left: 20px;
+}
+
+
+
+.no_msg{
+    font-size: 20px;
+    text-align: center;
+}
+
+.chat_form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5%;
+    position: fixed;
+    bottom: 0;
+    width: 75%;
+    height: 10vh;
+    background-color: white;
+
+
+}
+
+.chat_form > .msg_input{
+    border: 1.3px #bdbdbd solid;
+    outline: none;
+    padding: .5%;
+    border-radius: 3px;
+    color: rgb(53, 53, 53);
+    width: 50%;
+    transition: .3s;
+    outline: none;
+    margin-right: 10px;
+    padding: 1%;
+}
+
+.chat_form > .msg_input:focus{
+    border: 1.3px #313131 solid;
+}
+
+
+.chat_form > .send_btn{
+    border: none;
+    outline: none;
+    background-color: #2C2E43;
+    color: white;
+    padding: 1%;
+    width: 10%;
+    transition: .3s;
+    border-radius: 5px;
+}
+.chat_form > .send_btn:hover{
+    cursor: pointer;
+    background-color: #464646;
+}
+
+
+/* Extra small devices (phones, 800px and down) */
+@media only screen and (max-width: 800px) {
+
+    .contn .hidden_SideBar{
+        display: none;
+    }
+    .contn{
+        grid-template-columns: 100%;
+    }
+   
+    .chat_form{
+        width: 100%;
+    }
+
+    .msg .txt{
+        padding: 1.5%;
+    }
+
+    .chat_form > .send_btn,.chat_form > .msg_input{
+        padding: 1.5%;
+    }
+
+
+
+  }
+  
+
+  @media only screen and (max-width: 600px) {
+
+    .msg .txt{
+        padding: 3%;
+    }
+
+   
+
+    .chat_form > .send_btn,.chat_form > .msg_input{
+        width: 80%;
+        margin-left: 10px;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+    .chat_form > .send_btn{
+        width: 20%;
+        margin-right: 10px;
+    }
+ }

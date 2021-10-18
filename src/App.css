@@ -1,0 +1,12 @@
+.loader > p{
+    transition: .5s;
+    animation: spinner 1s linear infinite;
+}
+
+
+@keyframes spinner {
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
