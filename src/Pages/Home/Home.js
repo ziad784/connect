@@ -64,7 +64,7 @@ function Home() {
                 
                     <div className="chats">
                         <img src={chatImg} width={350} height={350} alt="img" />
-                        <p>Choose one to chat with</p>
+                        <p>Choose someone to chat with</p>
                     </div>
             
                 </div>
