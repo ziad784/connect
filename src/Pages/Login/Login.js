@@ -15,8 +15,6 @@ function Login() {
   const [Pass, setPass] = useState('');
 
 
-  axios.defaults.withCredentials = true;
-
 
 
  const Vailidate = () =>{
@@ -50,26 +48,50 @@ function Login() {
     if(Vailidate()){
 
 
-      axios.post(process.env.REACT_APP_API+"/login",{
-        email:Email,
-        password:Pass
-      })
-      .then((response) => {
-        console.log(response);
-        if(response.data.res === "ok"){
-              localStorage.setItem("token",response.data.token)
-              history.go("/")
-        }else if(response.data.msg){
-              const div = document.querySelector(".err_box")
-              div.style.display = "flex";
-              document.getElementById("err_txt").textContent = response.data.msg;
-              document.querySelector(".app").prepend(div);
-        }else{
-          const div = document.querySelector(".err_box")
-          div.style.display = "flex";
-          document.querySelector(".app").prepend(div);
-        }
-      })
+       axios({
+      url:process.env.REACT_APP_API+"/login",
+      method:"POST",
+      data:{email:Email, password:Pass},
+
+      
+    })  .then((response) => {
+      console.log(response);
+      if(response.data.res === "ok"){
+            localStorage.setItem("token",response.data.token)
+            history.go("/")
+      }else if(response.data.msg){
+            const div = document.querySelector(".err_box")
+            div.style.display = "flex";
+            document.getElementById("err_txt").textContent = response.data.msg;
+            document.querySelector(".app").prepend(div);
+      }else{
+        const div = document.querySelector(".err_box")
+        div.style.display = "flex";
+        document.querySelector(".app").prepend(div);
+      }
+    })
+
+
+      // axios.post(process.env.REACT_APP_API+"/login",{
+      //   email:Email,
+      //   password:Pass
+      // })
+      // .then((response) => {
+      //   console.log(response);
+      //   if(response.data.res === "ok"){
+      //         localStorage.setItem("token",response.data.token)
+      //         history.go("/")
+      //   }else if(response.data.msg){
+      //         const div = document.querySelector(".err_box")
+      //         div.style.display = "flex";
+      //         document.getElementById("err_txt").textContent = response.data.msg;
+      //         document.querySelector(".app").prepend(div);
+      //   }else{
+      //     const div = document.querySelector(".err_box")
+      //     div.style.display = "flex";
+      //     document.querySelector(".app").prepend(div);
+      //   }
+      // })
 
 
     }    

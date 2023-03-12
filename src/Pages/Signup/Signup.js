@@ -16,7 +16,7 @@ function Signup() {
   const [Email, setEmail] = useState('');
   const [Pass, setPass] = useState('');
   
-  axios.defaults.withCredentials = true;
+
 
 
 

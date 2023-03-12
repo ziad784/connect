@@ -13,7 +13,7 @@ function Home() {
     const [username, setusername] = useState('');
     const [img, setimg] = useState('');
     const [Id, setId] = useState('')
-    axios.defaults.withCredentials = true;
+
 
    
 

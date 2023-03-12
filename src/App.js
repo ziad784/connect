@@ -14,25 +14,43 @@ import './App.css'
 
 function App() {
   const [islogin, setislogin] = useState(null)
-  axios.defaults.withCredentials = true;
+
 
   useEffect(() => {
 
 
-
-    axios.post(process.env.REACT_APP_API+"/islogin",{token:localStorage.getItem("token")})
-    .then((data) => {
+    axios({
+      url:process.env.REACT_APP_API+"/islogin",
+      method:"POST",
+      data:{token:localStorage.getItem("token")},
+  
+      
+    })    .then((data) => {
 
 
 
       setislogin(data.data.islogin)
 
-      document.querySelector(".loader").remove();
+      document.querySelector(".loader")?.remove();
     }).catch((e)=>{
 
-      document.querySelector(".loader").remove();
+      document.querySelector(".loader")?.remove();
 
     })
+
+    // axios.post(process.env.REACT_APP_API+"/islogin",{token:localStorage.getItem("token")})
+    // .then((data) => {
+
+
+
+    //   setislogin(data.data.islogin)
+
+    //   document.querySelector(".loader").remove();
+    // }).catch((e)=>{
+
+    //   document.querySelector(".loader").remove();
+
+    // })
 
  
 
